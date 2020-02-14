@@ -1,3 +1,6 @@
+|<script src="./../js/p5.min.js"></script>
+|<script src="./../js/complex.js"></script>
+
 # Conjunto de Mandelbrot
 
 Pode ser que você já tenha ouvido falar do conjunto de Mandelbrot (Mandelbrot set), de fato ele é bem famoso e utilizado por jovens usuários de psicoativos devido a sua beleza e diferentes padrões que surgem ao darmos "zoom" nesse conjunto. Mas matemáticamente, como podemos definir o conjunto de Mandelbrot?
@@ -18,13 +21,17 @@ Com o mesmo pensamento porém indo na outra direção, podemos encontrar número
 
 ## A magnitude de um número complexo
 
-Assim como costumamos representar pontos em um plano cartesiano, podemos também representar os números complexos no chamado plano de Argand-Gauss, que possui o eixo `X` como eixo real e o `Y` como eixo imaginário, formando as duas componentes necessárias para representarmos um número complexo `z` da forma `(a, bi)`. No gráfico abaixo está representado o número (4, 3i), descomposto em cada eixo pelas retas vermelhas e uma outra reta azul, representando a magnitude de um número complexo.
+Assim como costumamos representar pontos em um plano cartesiano, podemos também representar os números complexos no chamado plano de Argand-Gauss, que possui o eixo `X` como eixo real e o `Y` como eixo imaginário, formando as duas componentes necessárias para representarmos um número complexo `z` da forma `(a, bi)`. 
 
-<div align="center">
-    <img src="./../assets/4.png" alt="Representação de (4, 3i) no plano complexo" width="300"/>
+<div>
+    No gráfico abaixo está representado o número <code class="hljs" id="complex-number"></code>, descomposto em cada eixo pelas retas vermelhas e uma outra reta azul, representando a magnitude desse número.
 </div>
 
-Geométricamente a magnitude de um número complexo é dada pela distância do número em relação a origem do sistema, com a notação de `|a + bi|` sendo usada para denotar a magnitude no número `a + bi`. Você pode encontrar a magnitude tanto usando a fórmula de distância entre dois pontos quanto pelo teorema de Pitágoras. Como eu não sou bobo escolhi um número que forma o triângulo mais clássico possível, e temos que o valor da hipotenusa (que também é o valor da magnitude desse complexo) é 5.
+>Você pode brincar com o gráfico passando o mouse por cima, ele é interativo ;)
+
+<div class="complex-plane" style="width: 100%"></div>
+
+Geométricamente a magnitude de um número complexo é dada pela distância do número em relação a origem do sistema, com a notação de `|a + bi|` sendo usada para denotar a magnitude no número `a + bi`. Você pode encontrar a magnitude tanto usando a fórmula de distância entre dois pontos quanto pelo teorema de Pitágoras. Pro complexo acima, calculando `√a² + b²` obtemos o módulo <code class="hljs" id="complex-number-magnitude"></code>.
 
 ## Voltando ao conjunto de Mandelbrot
 
