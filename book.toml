@@ -3,8 +3,9 @@ authors = ["Joao Vitor Maia"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Fractals: math as an art"
+title = "Math as art"
 
 [output.html]
 default-theme = "dark"
 preferred-dark-theme = "navy"
+mathjax-support = true

@@ -3,7 +3,7 @@
 
 # Conjunto de Mandelbrot
 
-Pode ser que você já tenha ouvido falar do conjunto de Mandelbrot (Mandelbrot set), de fato ele é bem famoso e utilizado por jovens usuários de psicoativos devido a sua beleza e diferentes padrões que surgem ao darmos "zoom" nesse conjunto. Mas matemáticamente, como podemos definir o conjunto de Mandelbrot?
+Pode ser que você já tenha ouvido falar do conjunto de Mandelbrot (Mandelbrot set), de fato ele é bem famoso e utilizado por jovens usuários de psicoativos devido a sua beleza e diferentes padrões que surgem ao darmos "zoom" nesse conjunto. Mas matematicamente, como podemos definir o conjunto de Mandelbrot?
 
 ## Números complexos na verdade são bem simples
 
