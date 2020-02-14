@@ -14,7 +14,7 @@ function draw(){
     background(255)
     let planeX = (mouseX - width/2)
     let planeY = (mouseY - height/2)  
-    document.querySelector('code#complex-number').innerText = `(${parseInt(planeX)}, ${parseInt(planeY)}i)`
+    document.querySelector('code#complex-number').innerText = `(${parseInt(planeX)}, ${parseInt(- planeY)}i)`
     document.querySelector('code#complex-number-magnitude').innerText = `${parseInt(Math.sqrt((planeX ** 2 + planeY ** 2)))}`
     drawGrid()
     drawAxis()
