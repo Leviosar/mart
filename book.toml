@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Fractals: math as an art"
+
+[output.html]
+default-theme = "dark"
+preferred-dark-theme = "navy"

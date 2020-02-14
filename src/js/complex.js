@@ -2,6 +2,7 @@ function setup() {
     const parent = document.querySelector("div.complex-plane")
     const canvas = createCanvas(parent.offsetWidth, 350)
     parent.appendChild(canvas.elt)
+    canvas.elt.style.cursor = "none"
 
     background(255)
     drawGrid()

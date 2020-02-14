@@ -1,5 +1,5 @@
-|<script src="./../js/p5.min.js"></script>
-|<script src="./../js/complex.js"></script>
+<script src="./../js/p5.min.js"></script>
+<script src="./../js/complex.js"></script>
 
 # Conjunto de Mandelbrot
 
@@ -39,6 +39,8 @@ Agora que já passamos por esse nem um pouco dolorosa revisão sobre números co
 
 Vamos começar supondo um número complexo qualquer `c`, esse número que depois será parte (ou não) do nosso conjunto. A função `f(z) = z² + c` possui dois comportamentos possíveis para diferentes valores de `c` quando aplicados iterativamente começando pelo valor 0. 
 
+> Iterar sobre uma função a partir de um valor x significa começar aplicando f(x) e ao obter o resultado do valor de f(x), aplicar esse resultado na função, seria algo como: f ( f ( f(x) ) com uma quantidade de repetições escolhida.
+
 ### Primeiro caso (aquele que não faz parte do conjunto)
 
 Para o primeiro caso, vamos exemplificar utilizando o valor 1 para `c`. Como provado antes, 1 é um número complexo que pode ser representado como `1 + 0i`, mas no momento apenas 1 ja é o suficiente para nós. Se aplicarmos 0 a função `f(z) = z² + 1` teremos algo como:
@@ -49,7 +51,7 @@ f(1) = 1² + 1 = 2
 f(2) = 2² + 1 = 5
 f(5) = 5² + 1 = 26
 f(26) = 26² + 1 = 677
-f(676) = 676² + 1 = 458330
+f(677) = 677² + 1 = 458330
 .
 .
 .
@@ -73,4 +75,4 @@ f(-1) = (-1)² - 1 = 0
 .
 ```
 
-Os valores da iteração começaram a se repetir, e vão continuar esse repetição infinitamente, mas isso não é o importante, o segundo caso (e ganhador do nosso concurso de quem quer ser um Mandelbrot) é descrito como uma aplicação onde a distância entre o complexo gerado e a origem nunca ultrapassa o valor 2.
+Os valores da iteração começaram a se repetir, e vão continuar esse repetição infinitamente, mas isso não é o importante, o segundo caso (e ganhador do nosso concurso de quem quer ser um Mandelbrot) é descrito como uma aplicação onde a distância entre o complexo gerado e a origem não diverge de um valor absoluto.
