@@ -16,6 +16,8 @@ Com o mesmo pensamento porém indo na outra direção, podemos encontrar número
     <img src="./../assets/venn.svg" alt="Diagrama de Venn dos números complexos" width="500"/>
 </div>
 
+## A magnitude de um número complexo
+
 Assim como costumamos representar pontos em um plano cartesiano, podemos também representar os números complexos no chamado plano de Argand-Gauss, que possui o eixo `X` como eixo real e o `Y` como eixo imaginário, formando as duas componentes necessárias para representarmos um número complexo `z` da forma `(a, bi)`. No gráfico abaixo está representado o número (4, 3i), descomposto em cada eixo pelas retas vermelhas e uma outra reta azul, representando a magnitude de um número complexo.
 
 <div align="center">
@@ -23,3 +25,45 @@ Assim como costumamos representar pontos em um plano cartesiano, podemos também
 </div>
 
 Geométricamente a magnitude de um número complexo é dada pela distância do número em relação a origem do sistema, com a notação de `|a + bi|` sendo usada para denotar a magnitude no número `a + bi`. Você pode encontrar a magnitude tanto usando a fórmula de distância entre dois pontos quanto pelo teorema de Pitágoras. Como eu não sou bobo escolhi um número que forma o triângulo mais clássico possível, e temos que o valor da hipotenusa (que também é o valor da magnitude desse complexo) é 5.
+
+## Voltando ao conjunto de Mandelbrot
+
+Agora que já passamos por esse nem um pouco dolorosa revisão sobre números complexos, chegou a hora de definirmos matemáticamente (e com um pouco de sorte quem sabe até construirmos nossa própria visualização) do conjunto de Mandelbrot, que aqui chamarei de M. Por enquanto vamos dizer que `M = {c | c atende ao caso 2}`. O que é `c`? O que é o caso 2?
+
+Vamos começar supondo um número complexo qualquer `c`, esse número que depois será parte (ou não) do nosso conjunto. A função `f(z) = z² + c` possui dois comportamentos possíveis para diferentes valores de `c` quando aplicados iterativamente começando pelo valor 0. 
+
+### Primeiro caso (aquele que não faz parte do conjunto)
+
+Para o primeiro caso, vamos exemplificar utilizando o valor 1 para `c`. Como provado antes, 1 é um número complexo que pode ser representado como `1 + 0i`, mas no momento apenas 1 ja é o suficiente para nós. Se aplicarmos 0 a função `f(z) = z² + 1` teremos algo como:
+
+```
+f(0) = 0² + 1 = 1
+f(1) = 1² + 1 = 2
+f(2) = 2² + 1 = 5
+f(5) = 5² + 1 = 26
+f(26) = 26² + 1 = 677
+f(676) = 676² + 1 = 458330
+.
+.
+.
+```
+
+Basicamente, quando a distância entre os números complexos gerador por essa função (gerada utilizando o valor de `c` como uma constante e como variável uma iteração sobre resultados a partir de 0) e a origem do plano Argand-Gauss for crescendo ao infinito, dizemos que `c` não satisfaz a regra de formação do conjunto M.
+
+### Segundo caso (aquele que faz parte do conjunto)
+
+Agora, curiosamente podemos exemplificar essa dicotomia utilizando um caso oposto, `c` = -1, obtendo uma função `f(z) = z² - 1`, e ao aplicarmos a mesma iteração aplicada a função anterior, talvez sua mente exploda um tantinho:
+
+```
+f(0) = 0² - 1 = -1
+f(-1) = (-1)² - 1 = 0
+f(0) = 0² - 1 = -1
+f(-1) = (-1)² - 1 = 0
+f(0) = 0² - 1 = -1
+f(-1) = (-1)² - 1 = 0
+.
+.
+.
+```
+
+Os valores da iteração começaram a se repetir, e vão continuar esse repetição infinitamente, mas isso não é o importante, o segundo caso (e ganhador do nosso concurso de quem quer ser um Mandelbrot) é descrito como uma aplicação onde a distância entre o complexo gerado e a origem nunca ultrapassa o valor 2.
