@@ -3,13 +3,13 @@
 
 # Conjunto de Mandelbrot
 
-Pode ser que você já tenha ouvido falar do conjunto de Mandelbrot (Mandelbrot set), de fato ele é bem famoso e utilizado por jovens usuários de psicoativos devido a sua beleza e diferentes padrões que surgem ao darmos "zoom" nesse conjunto. Mas matematicamente, como podemos definir o conjunto de Mandelbrot?
+Pode ser que você já tenha ouvido falar do conjunto de Mandelbrot, de fato ele é bem famoso e utilizado por jovens usuários de psicoativos devido a sua beleza e diferentes padrões que surgem ao darmos "zoom" nesse conjunto. Mas matematicamente, como podemos definir o conjunto de Mandelbrot?
 
 ## Números complexos na verdade são bem simples
 
-Antes de tudo, vamos lembrar o que são números complexos. Um número complexo (péssimo nome pra se dar a um conjunto) é qualquer número que possa ser escrito na forma `a + bi` ou `(a, bi)`, onde `a` e `b` são números reais e `i` é um número tal que `i² = -1`, ou seja, temos que o único valor possível para `i` é `√-1`.
+Antes de tudo, vamos lembrar o que são números complexos. Um número complexo (péssimo nome pra se dar a um conjunto) é qualquer número que possa ser escrito na forma `a + bi` ou `(a, bi)`, onde `a` e `b` são números reais e `i` é um número tal que `i² = -1`, ou seja, temos que o único valor possível para `i` é `√(-1)`.
 
-Se você nunca estudou números complexos pode estar confuso com `√-1`, muitos professores de ensino fundamental e médio costumam falar que não existem raízes quadradas de números negativos, entretanto uma correção a essa sentença seria de que não existem raízes quadradas _reais_ para números negativos. O conjunto dos números complexos são um superconjunto dos números reais, isso significa que TODOS os números reais são números complexos, porém nem todos os números complexos são reais, quer que eu te prove?
+Se você nunca estudou números complexos pode estar confuso com `√(-1)`. Muitos professores de ensino fundamental e médio costumam falar que não existem raízes quadradas de números negativos, entretanto uma correção a essa sentença seria de que não existem raízes quadradas _reais_ para números negativos. O conjunto dos números complexos são um superconjunto dos números reais, isso significa que TODOS os números reais são números complexos, porém nem todos os números complexos são reais, quer que eu te prove?
 
 Vamos primeiro provar que todos os números reais são complexos, como eu disse antes, números complexos são números que podem ser escritos na forma `a + bi` ou `(a, bi)`, para escrever qualquer número real como um complexo, simplesmente adotamos para `b` o valor 0, dessa forma temos que o conjunto dos números reais puros é descrito como `{(a, 0i) | a ∈ R}`.
 
@@ -31,15 +31,15 @@ Assim como costumamos representar pontos em um plano cartesiano, podemos também
 
 <div class="complex-plane" style="width: 100%"></div>
 
-Geométricamente a magnitude de um número complexo é dada pela distância do número em relação a origem do sistema, com a notação de `|a + bi|` sendo usada para denotar a magnitude no número `a + bi`. Você pode encontrar a magnitude tanto usando a fórmula de distância entre dois pontos quanto pelo teorema de Pitágoras. Pro complexo acima, calculando `√a² + b²` obtemos o módulo <code class="hljs" id="complex-number-magnitude"></code>.
+Geometricamente a magnitude de um número complexo é dada pela distância do número em relação a origem do sistema, com a notação de `|a + bi|` sendo usada para denotar a magnitude no número `a + bi`. Você pode encontrar a magnitude tanto usando a fórmula de distância entre dois pontos quanto pelo teorema de Pitágoras. Pro complexo acima, calculando `√a² + b²` obtemos o módulo <code class="hljs" id="complex-number-magnitude"></code>.
 
 ## Voltando ao conjunto de Mandelbrot
 
-Agora que já passamos por esse nem um pouco dolorosa revisão sobre números complexos, chegou a hora de definirmos matemáticamente (e com um pouco de sorte quem sabe até construirmos nossa própria visualização) do conjunto de Mandelbrot, que aqui chamarei de M. Por enquanto vamos dizer que `M = {c | c atende ao caso 2}`. O que é `c`? O que é o caso 2?
+Agora que já passamos por essa nem um pouco dolorosa revisão sobre números complexos, chegou a hora de definirmos matematicamente (e com um pouco de sorte quem sabe até construirmos nossa própria visualização) o conjunto de Mandelbrot, que aqui chamarei de M. Por enquanto vamos dizer que `M = {c | c atende ao caso 2}`. O que é `c`? O que é o caso 2?
 
 Vamos começar supondo um número complexo qualquer `c`, esse número que depois será parte (ou não) do nosso conjunto. A função `f(z) = z² + c` possui dois comportamentos possíveis para diferentes valores de `c` quando aplicados iterativamente começando pelo valor 0. 
 
-> Iterar sobre uma função a partir de um valor x significa começar aplicando f(x) e ao obter o resultado do valor de f(x), aplicar esse resultado na função, seria algo como: f ( f ( f(x) ) com uma quantidade de repetições escolhida.
+> Iterar sobre uma função a partir de um valor x significa começar aplicando f(x) e, utilizando o resultado no lugar de x, aplicar f(x) novamente. Seria algo como f(f(f(x))) com uma quantidade de repetições escolhida.
 
 ### Primeiro caso (aquele que não faz parte do conjunto)
 
@@ -57,7 +57,7 @@ f(677) = 677² + 1 = 458330
 .
 ```
 
-Basicamente, quando a distância entre os números complexos gerador por essa função (gerada utilizando o valor de `c` como uma constante e como variável uma iteração sobre resultados a partir de 0) e a origem do plano Argand-Gauss for crescendo ao infinito, dizemos que `c` não satisfaz a regra de formação do conjunto M.
+Basicamente, quando a distância entre os números complexos gerados por essa função (utilizando o valor de `c` como uma constante e os resultados de f(x) como variável) e a origem do plano Argand-Gauss for crescendo ao infinito, dizemos que `c` não satisfaz a regra de formação do conjunto M.
 
 ### Segundo caso (aquele que faz parte do conjunto)
 
