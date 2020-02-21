@@ -1,0 +1,9 @@
+# Mart - o que diabos significa isso?
+
+Durante um bom tempo na minha vida eu ouvi que pessoas era de exatas _ou_ de humanas, que artistas não sabiam matemática e matemáticos não sabiam desenhar. Sempre achei isso uma bobagem sem fim e acabei por conhecer pessoas que concordavam comigo. Matemática e arte podem andar juntas, a matemática é multidisciplinar e pode ser aplicada nas mais variadas áreas.
+
+E foi assim que depois de vários anos de aprendizado, estudo e enrolação eu decidi começar a escrever um pouco mais sobre isso e talvez ajudar pessoas que gostam de matemática a fazer arte ou então ajudar pessoas que gostam de arte a usar a matemática nela. _Mart_ na minha cabeça significa _Math as art_ e eu decidi usar isso como título desse projeto.
+
+Espero que nos próximos capítulos (caso você decida continuar lendo) eu consiga te ensinar um pouco do que eu sei e te motivar a aprender mais sozinho. Vamos trabalhar com visualização matemática, tratamento de dados, desenhos gerado por padrões numéricos e qualquer outra coisa que me dê na telha. Tentarei manter um tutorial atualizado de todas as ferramentas que serão usadas nos capítulos, mas caso eu não consiga fazer isso, você pode.
+
+Mart é escrito no formato de livro, mas não deixa de ser um _software_, e o melhor de tudo, um _software open source_. Se você sabe um pouquinho sobre como contribuir com projetos de código aberto e gostaria de corrigir, complementar ou até então escrever um capítulo completamente novo, abre um PR no [repositório oficial](https://github.com/Leviosar/mart/). Se você não sabe como fazer isso, [entra em contato comigo no Telegram](https://t.me/leviosar) e a gente da um jeito
